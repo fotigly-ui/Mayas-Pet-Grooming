@@ -1,18 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Star, Sparkles, Scissors, Droplets, Heart } from "lucide-react";
+import { Mail, MapPin, Phone, Star, Sparkles, Scissors, Droplets, Heart, Send } from "lucide-react";
 import { useState } from "react";
 
 /**
  * Design Philosophy: Vibrant Playful Energy
  * - Bold vibrant orange (#FF7A3D) as primary color
- * - Playful, hand-drawn aesthetic with organic shapes
- * - Energetic animations and hover effects
+ * - Professional yet playful aesthetic with organic shapes
+ * - Smooth animations and refined interactions
  * - Warm, inviting typography (Fredoka for headings, Poppins for body)
  */
 
 export default function Home() {
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real app, this would send to a backend
+    console.log("Form submitted:", formData);
+    setFormSubmitted(true);
+    setTimeout(() => {
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormSubmitted(false);
+    }, 3000);
+  };
 
   const services = [
     {
@@ -72,33 +94,33 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">M</span>
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/kLLMfmJtZSVONRsZ.jpeg" 
+              alt="Maya's Pet Grooming Logo"
+              className="h-12 w-auto"
+            />
+            <div>
+              <h1 className="text-lg font-bold text-gray-900">Maya's Pet Grooming</h1>
+              <p className="text-xs text-orange-500 font-semibold">All About Furry Tails</p>
             </div>
-            <h1 className="text-xl font-bold text-gray-900">Maya's Pet Grooming</h1>
           </div>
           <div className="hidden md:flex gap-8">
-            <a href="#services" className="text-gray-700 hover:text-orange-500 transition">Services</a>
-            <a href="#portfolio" className="text-gray-700 hover:text-orange-500 transition">Portfolio</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-orange-500 transition">Reviews</a>
-            <a href="#contact" className="text-gray-700 hover:text-orange-500 transition">Contact</a>
+            <a href="#services" className="text-gray-700 hover:text-orange-500 transition font-medium">Services</a>
+            <a href="#portfolio" className="text-gray-700 hover:text-orange-500 transition font-medium">Portfolio</a>
+            <a href="#testimonials" className="text-gray-700 hover:text-orange-500 transition font-medium">Reviews</a>
+            <a href="#contact" className="text-gray-700 hover:text-orange-500 transition font-medium">Contact</a>
           </div>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white">Book Now</Button>
+          <a href="#contact">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">Book Now</Button>
+          </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-white pt-20 pb-32">
-        {/* Decorative wavy background */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="none">
-            <path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="currentColor" className="text-orange-500" />
-          </svg>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-50 pt-16 pb-24">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
@@ -108,25 +130,29 @@ export default function Home() {
               <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Your Dog's Spa Day, <span className="text-orange-500">On Wheels</span>
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Professional dog grooming that comes to your home. We bring the spa experience directly to your doorstep with our fully equipped mobile grooming van.
               </p>
               <div className="flex gap-4 pt-4">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-                  Book Your Appointment
-                </Button>
-                <Button size="lg" variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50">
-                  Learn More
-                </Button>
+                <a href="#contact">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">
+                    Book Your Appointment
+                  </Button>
+                </a>
+                <a href="#services">
+                  <Button size="lg" variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold">
+                    Learn More
+                  </Button>
+                </a>
               </div>
               <div className="flex gap-8 pt-8">
                 <div>
                   <p className="text-3xl font-bold text-orange-500">500+</p>
-                  <p className="text-gray-600">Happy Dogs Groomed</p>
+                  <p className="text-gray-600 text-sm">Happy Dogs Groomed</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-orange-500">4.9★</p>
-                  <p className="text-gray-600">Customer Rating</p>
+                  <p className="text-gray-600 text-sm">Customer Rating</p>
                 </div>
               </div>
             </div>
@@ -138,7 +164,7 @@ export default function Home() {
                 alt="Happy groomed dog"
                 className="w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg border-2 border-orange-100">
                 <p className="text-sm font-semibold text-gray-900">All About Furry Tails! 🐾</p>
               </div>
             </div>
@@ -147,11 +173,11 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Services</h3>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2">Professional Grooming Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">Professional Grooming Services</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               From basic baths to complete grooming transformations, we offer comprehensive services tailored to your dog's needs.
             </p>
@@ -163,10 +189,10 @@ export default function Home() {
               return (
                 <Card 
                   key={index}
-                  className="p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-white border-0"
+                  className="p-6 hover:shadow-xl hover:-translate-y-3 transition-all duration-300 bg-white border-0 rounded-xl"
                 >
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-orange-500" />
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-7 h-7 text-orange-500" />
                   </div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
@@ -178,11 +204,11 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
+      <section id="portfolio" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Work</h3>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2">Grooming Transformations</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">Grooming Transformations</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               See the amazing before and after results of our professional grooming services.
             </p>
@@ -193,7 +219,6 @@ export default function Home() {
               <div 
                 key={index}
                 className="group cursor-pointer"
-                onClick={() => setSelectedImage(index)}
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
                   <img 
@@ -201,7 +226,7 @@ export default function Home() {
                     alt={item.title}
                     className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div className="text-white">
                       <h4 className="text-xl font-bold">{item.title}</h4>
                       <p className="text-sm text-gray-200">{item.breed}</p>
@@ -215,11 +240,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-orange-50">
+      <section id="testimonials" className="py-24 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Reviews</h3>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2">What Our Clients Say</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">What Our Clients Say</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               Don't just take our word for it - hear from happy dog owners who trust us with their furry friends.
             </p>
@@ -227,7 +252,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 bg-white border-0 shadow-md hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-6 bg-white border-0 shadow-md hover:shadow-lg transition-shadow rounded-xl">
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -242,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* Mobile Van Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -264,7 +289,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Stress-Free Experience</h4>
-                    <p className="text-gray-600">Your dog stays in a familiar environment</p>
+                    <p className="text-gray-600 text-sm">Your dog stays in a familiar environment</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -273,7 +298,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Premium Equipment</h4>
-                    <p className="text-gray-600">State-of-the-art grooming tools and products</p>
+                    <p className="text-gray-600 text-sm">State-of-the-art grooming tools and products</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -282,23 +307,25 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Personalized Care</h4>
-                    <p className="text-gray-600">Tailored grooming for your dog's unique needs</p>
+                    <p className="text-gray-600 text-sm">Tailored grooming for your dog's unique needs</p>
                   </div>
                 </div>
               </div>
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white mt-6">
-                Schedule Your Visit
-              </Button>
+              <a href="#contact">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold mt-6">
+                  Schedule Your Visit
+                </Button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-white">
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="flex gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <a href="tel:0419509190" className="flex gap-4 hover:opacity-80 transition">
               <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Phone className="w-6 h-6" />
               </div>
@@ -306,8 +333,8 @@ export default function Home() {
                 <h4 className="font-bold mb-1">Call Us</h4>
                 <p className="text-gray-300">0419 509 190</p>
               </div>
-            </div>
-            <div className="flex gap-4">
+            </a>
+            <a href="mailto:hello@mayaspetgrooming.com" className="flex gap-4 hover:opacity-80 transition">
               <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6" />
               </div>
@@ -315,7 +342,7 @@ export default function Home() {
                 <h4 className="font-bold mb-1">Email</h4>
                 <p className="text-gray-300">hello@mayaspetgrooming.com</p>
               </div>
-            </div>
+            </a>
             <div className="flex gap-4">
               <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6" />
@@ -327,20 +354,69 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold mb-6">Ready to Book?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl">
-              Contact us today to schedule your dog's grooming appointment. We're available 7 days a week and offer flexible booking times to suit your schedule.
-            </p>
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-              Get in Touch
-            </Button>
+          <div className="bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700">
+            <h2 className="text-3xl font-bold mb-2">Ready to Book?</h2>
+            <p className="text-gray-300 mb-8">Send us a message and we'll get back to you within 24 hours.</p>
+            
+            {formSubmitted && (
+              <div className="mb-6 p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-200">
+                ✓ Thank you! We'll contact you soon.
+              </div>
+            )}
+
+            <form onSubmit={handleFormSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border border-gray-600 focus:border-orange-500 focus:outline-none transition"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border border-gray-600 focus:border-orange-500 focus:outline-none transition"
+                />
+              </div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                value={formData.phone}
+                onChange={handleFormChange}
+                className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border border-gray-600 focus:border-orange-500 focus:outline-none transition"
+              />
+              <textarea
+                name="message"
+                placeholder="Tell us about your dog and what services you're interested in..."
+                value={formData.message}
+                onChange={handleFormChange}
+                required
+                rows={4}
+                className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border border-gray-600 focus:border-orange-500 focus:outline-none transition resize-none"
+              />
+              <Button 
+                type="submit"
+                size="lg" 
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold w-full md:w-auto flex items-center gap-2"
+              >
+                <Send className="w-5 h-5" />
+                Send Message
+              </Button>
+            </form>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-8">
+      <footer className="bg-gray-950 text-gray-400 py-8 border-t border-gray-800">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2024 Maya's Pet Grooming. All About Furry Tails! 🐾</p>
         </div>

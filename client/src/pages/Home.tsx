@@ -107,6 +107,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden md:flex gap-8">
+            <a href="#about" className="text-gray-700 hover:text-orange-500 transition font-medium">About</a>
             <a href="#services" className="text-gray-700 hover:text-orange-500 transition font-medium">Services</a>
             <a href="#portfolio" className="text-gray-700 hover:text-orange-500 transition font-medium">Portfolio</a>
             <a href="#testimonials" className="text-gray-700 hover:text-orange-500 transition font-medium">Reviews</a>
@@ -166,6 +167,62 @@ export default function Home() {
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg border-2 border-orange-100">
                 <p className="text-sm font-semibold text-gray-900">All About Furry Tails! 🐾</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="about" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/XeYpEnAfTiXjZhal.jpeg" 
+                alt="Maya's Pet Grooming Team"
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet the Team</h3>
+                <h2 className="text-4xl font-bold text-gray-900 mt-3">Passionate About Pet Care</h2>
+              </div>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                At Maya's Pet Grooming, we are a dedicated team of pet lovers committed to providing the highest quality grooming services. With years of experience and genuine care for every furry friend, we treat your dog like family.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our mission is simple: to make your dog feel pampered, look their best, and stay healthy. We use only premium grooming products and the latest techniques to ensure every pup leaves our van looking and feeling amazing.
+              </p>
+              <div className="space-y-3 pt-4">
+                <div className="flex gap-3">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">+</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Experienced Groomers</h4>
+                    <p className="text-gray-600 text-sm">Trained professionals with years of expertise</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">+</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Premium Products</h4>
+                    <p className="text-gray-600 text-sm">Only the best shampoos and grooming supplies</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">+</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Gentle and Patient</h4>
+                    <p className="text-gray-600 text-sm">We handle nervous or anxious dogs with care</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

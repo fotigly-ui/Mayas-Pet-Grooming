@@ -70,6 +70,11 @@ export default function Home() {
       title: "Poodle Perfection",
       breed: "Toy Poodle",
     },
+    {
+      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/IorVULIfXjyXHckl.jpeg",
+      title: "Happy in the Van",
+      breed: "Golden Retriever",
+    },
   ];
 
   const testimonials = [
@@ -271,7 +276,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolio.map((item, index) => (
               <div 
                 key={index}

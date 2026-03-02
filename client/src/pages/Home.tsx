@@ -395,7 +395,7 @@ export default function Home() {
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Service Coverage</h3>
             <h2 className="text-4xl font-bold text-gray-900 mt-3">We Service Your Area</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Based in Currans Hill, we provide mobile grooming services throughout the Macarthur region including Ingleburn, Macquarie Fields, Camden, Narellan, Oran Park, Spring Farm, and Elderslie.
+              Based in Currans Hill, we provide mobile grooming services throughout the Macarthur region.
             </p>
           </div>
 
@@ -406,7 +406,7 @@ export default function Home() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
               <h4 className="font-bold text-gray-900 mb-2">Service Areas</h4>
-              <p className="text-gray-600 text-sm">Ingleburn, Macquarie Fields, Camden, Narellan, Oran Park, Spring Farm, Elderslie & more</p>
+              <p className="text-gray-600">Macarthur Region</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
               <h4 className="font-bold text-gray-900 mb-2">Mobile Service</h4>

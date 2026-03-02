@@ -388,6 +388,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service Area Map Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Service Coverage</h3>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">We Service Your Area</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Based in Currans Hill, we provide mobile grooming services throughout the surrounding regions including Minto, Camden, and Grasmere.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+              <h4 className="font-bold text-gray-900 mb-2">Base Location</h4>
+              <p className="text-gray-600">Currans Hill, NSW 2567</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+              <h4 className="font-bold text-gray-900 mb-2">Service Areas</h4>
+              <p className="text-gray-600">Minto, Camden, Grasmere</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+              <h4 className="font-bold text-gray-900 mb-2">Mobile Service</h4>
+              <p className="text-gray-600">We come to your home</p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5678901234567!2d150.7654321!3d-34.0123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4d8c0000001%3A0x1234567890abcdef!2sCurrans%20Hill%20NSW%202567!5e0!3m2!1sen!2sau!4v1234567890123"
+              width="100%"
+              height="500"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          <div className="mt-12 bg-orange-50 p-8 rounded-xl">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Not Sure If We Service Your Area?</h3>
+            <p className="text-gray-600 mb-6">
+              We're constantly expanding our service area. Contact us to check if we can reach your location or to discuss custom arrangements.
+            </p>
+            <a href="#contact">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">Get in Touch</Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4">
@@ -416,7 +466,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="font-bold mb-1">Service Area</h4>
-                <p className="text-gray-300">Greater Brisbane Area</p>
+                <p className="text-gray-300">Currans Hill, Minto, Camden, Grasmere</p>
               </div>
             </div>
           </div>

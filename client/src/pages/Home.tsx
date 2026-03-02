@@ -75,6 +75,11 @@ export default function Home() {
       title: "Happy in the Van",
       breed: "Golden Retriever",
     },
+    {
+      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/NUUdtLJQPqLOcbdT.jpeg",
+      title: "Professional Grooming Setup",
+      breed: "Poodle",
+    },
   ];
 
   const testimonials = [

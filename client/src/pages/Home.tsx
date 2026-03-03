@@ -61,16 +61,6 @@ export default function Home() {
 
   const portfolio = [
     {
-      image: "https://private-us-east-1.manuscdn.com/sessionFile/dEDbRc6EehzPPNBE8o9Sih/sandbox/js4tgbzDUSSatmHE9pYpwv-img-2_1772088291000_na1fn_Z3Jvb21pbmctdHJhbnNmb3JtYXRpb24tMQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZEVEYlJjNkVlaHpQUE5CRThvOVNpaC9zYW5kYm94L2pzNHRnYnpEVVNTYXRtSEU5cFlwd3YtaW1nLTJfMTc3MjA4ODI5MTAwMF9uYTFmbl9aM0p2YjIxcGJtY3RkSEpoYm5ObWIzSnRZWFJwYjI0dE1RLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=kCCnQxYJwc1in8tAznN3mSrDJe9ZYj4HO0UX1drO9NUlIuklYa2ObfxuaTIJxvXIbIZIHXyWrpn5o-jodTPm8gM8zUfSS1AXR1WemN-ahA5jAK~tK9KquFnQkDfZ4jeQTRKm6~vwJIn9bLLBohTrEfXND0sgJVRAWxfJbChbYR0TRvV~FNqU8BI2UogXjrn-JXNlybpCNM2glmsnRIe8Df4~t57MbhXbR0dCLAterFjc2IrgvgJhV7EroNDnG0EqzOw08V0F-NifHivea6WWRrqgNSrZ6rN2sGauCkNpAAdqcQuWAJ~pZ2QlhsaW4-0bWUFbUBbbHSOiuapCoDryqQ__",
-      title: "Fluffy Transformation",
-      breed: "Cavalier King Charles Spaniel",
-    },
-    {
-      image: "https://private-us-east-1.manuscdn.com/sessionFile/dEDbRc6EehzPPNBE8o9Sih/sandbox/js4tgbzDUSSatmHE9pYpwv-img-3_1772088290000_na1fn_Z3Jvb21pbmctdHJhbnNmb3JtYXRpb24tMg.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZEVEYlJjNkVlaHpQUE5CRThvOVNpaC9zYW5kYm94L2pzNHRnYnpEVVNTYXRtSEU5cFlwd3YtaW1nLTNfMTc3MjA4ODI5MDAwMF9uYTFmbl9aM0p2YjIxcGJtY3RkSEpoYm5ObWIzSnRZWFJwYjI0dE1nLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=oT3KNa1mufNhiYlyjjaZ2Ld-C94WfaxvnavxjKE81O6c6cdeSX-~pUu6Qp3UxzBm4OV1Miw0avT9VPiaNph6GEExmqvoEt1RhlvV6zLph2nZwwW4a3G8oxbK8X1CZGvjEdAsksXXh7fSGFAer9WiThmuqZ0WTvqAECBMjQMfsWyeKINTwP~esV3vk5z4ejgWdWbWvT~WVYITtYCp1OT7oo7gOZxQ~sfB2CriJEtCddRDEue0gGZbiepDUuu0mCP~1PglKf382ZnQhr4p-MaKqSqulAw6-h0EeKG8UqANB6y41E-VNWnBTJa21PVv4F0UaKRyXjC5lPmB1s3K4jEFWw__",
-      title: "Poodle Perfection",
-      breed: "Toy Poodle",
-    },
-    {
       image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/IorVULIfXjyXHckl.jpeg",
       title: "Happy in the Van",
       breed: "Golden Retriever",
@@ -399,11 +389,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
-              <h4 className="font-bold text-gray-900 mb-2">Base Location</h4>
-              <p className="text-gray-600">Currans Hill, NSW 2567</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
               <h4 className="font-bold text-gray-900 mb-2">Service Areas</h4>
               <p className="text-gray-600">Macarthur Region</p>

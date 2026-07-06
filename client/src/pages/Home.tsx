@@ -39,23 +39,28 @@ export default function Home() {
   const services = [
     {
       icon: Scissors,
-      title: "Full Grooming",
-      description: "Complete bath, dry, and haircut service tailored to your dog's breed and style preferences.",
+      title: "Full Groom",
+      description: "Bath, blow-dry, brush-out, breed-appropriate haircut and a spritz of cologne. The full works.",
     },
     {
       icon: Droplets,
-      title: "Bath & Wash",
-      description: "Professional bathing with premium shampoos and conditioners for a fresh, clean coat.",
+      title: "Bath & Tidy",
+      description: "A wash, blow-dry and brush-out, plus a hygiene cut — paw pads, sanitary areas and a tidy face trim.",
     },
     {
       icon: Heart,
-      title: "Nail & Paw Care",
-      description: "Gentle nail trimming, paw pad cleaning, and moisturizing treatments for healthy paws.",
+      title: "De-shedding Treatment",
+      description: "A deep undercoat blow-out for heavy shedders — less fur on your couch, cooler dog in summer.",
     },
     {
       icon: Sparkles,
-      title: "De-shedding",
-      description: "Specialized treatment to reduce shedding and keep your dog's coat healthy and shiny.",
+      title: "Flea Treatment",
+      description: "A thorough flea wash and treatment to get your dog comfortable and itch-free again.",
+    },
+    {
+      icon: Heart,
+      title: "Puppy's First Groom",
+      description: "A gentle, positive introduction to grooming so future visits are something your puppy looks forward to.",
     },
   ];
 
@@ -103,7 +108,7 @@ export default function Home() {
             />
             <div>
               <h1 className="text-lg font-bold text-gray-900">Maya's Pet Grooming</h1>
-              <p className="text-xs text-orange-500 font-semibold">All About Furry Tails</p>
+              <p className="text-xs text-orange-500 font-semibold">FurryTails</p>
             </div>
           </div>
           <div className="hidden md:flex gap-8">
@@ -186,14 +191,20 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               <div>
-                <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet the Team</h3>
-                <h2 className="text-4xl font-bold text-gray-900 mt-3">Passionate About Pet Care</h2>
+                <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet Maya's</h3>
+                <h2 className="text-4xl font-bold text-gray-900 mt-3">Named after the littlest team member.</h2>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed">
-                At Maya's Pet Grooming, we are a dedicated team of pet lovers committed to providing the highest quality grooming services. With years of experience and genuine care for every furry friend, we treat your dog like family.
+                Maya's Pet Grooming started the way most good local businesses do with a love of dogs and a family that wanted to do things properly. We kitted out our own trailer, put it on the road, and now bring the grooming salon straight to driveways.
+              </p>
+              <p className="text-lg font-semibold text-gray-900">
+                No drop-off, no van full of strange dogs, no long wait at a salon.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Our mission is simple: to make your dog feel pampered, look their best, and stay healthy. We use only premium grooming products and the latest techniques to ensure every pup leaves our van looking and feeling amazing.
+                Your dog is the only one in the trailer during their appointment, groomed calmly and on their own schedule, while you're just steps away at home.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                It's a genuinely family affair same friendly faces every visit, and a genuine soft spot for the nervous, the fluffy, and the ones who hate the hairdryer.
               </p>
               <div className="space-y-3 pt-4">
                 <div className="flex gap-3">
@@ -234,9 +245,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Services</h3>
-            <h2 className="text-4xl font-bold text-gray-900 mt-3">Professional Grooming Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">Everything your dog needs, done kerbside.</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              From basic baths to complete grooming transformations, we offer comprehensive services tailored to your dog's needs.
+              Every groom is tailored to your dog's coat and temperament. Get in touch and we'll recommend the right service for your pup. Every service includes a complimentary nail trim and ear clean no matter which groom you book.
             </p>
           </div>
 
@@ -260,14 +271,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-24 bg-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">How It Works</h3>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">Four steps, zero car trips.</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">01</div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Get in touch</h4>
+              <p className="text-gray-600">Call, text, email or WhatsApp with your dog's breed, size and what you'd like done.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">02</div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">We book a time</h4>
+              <p className="text-gray-600">Pick a slot that suits you we'll confirm the day before.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">03</div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Trailer pulls up</h4>
+              <p className="text-gray-600">We park outside your home and set up. Your dog stays close, calm and unbothered.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">04</div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Freshly groomed</h4>
+              <p className="text-gray-600">We knock when they're done clean, brushed and smelling great.</p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-4">Pricing depends on breed, coat and condition.</p>
+            <p className="text-lg font-semibold text-gray-900">Send us a photo and we'll give you a straight answer.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Work</h3>
-            <h2 className="text-4xl font-bold text-gray-900 mt-3">Grooming Transformations</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3">Our Gallery</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              See the amazing before and after results of our professional grooming services.
+              Check out our happy clients and their freshly groomed pups.
             </p>
           </div>
 
@@ -437,13 +486,13 @@ export default function Home() {
                 <p className="text-gray-300">0419 509 190</p>
               </div>
             </a>
-            <a href="mailto:hello@mayaspetgrooming.com" className="flex gap-4 hover:opacity-80 transition">
+            <a href="mailto:foti@mayaspetgrooming.com.au" className="flex gap-4 hover:opacity-80 transition">
               <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="font-bold mb-1">Email</h4>
-                <p className="text-gray-300">hello@mayaspetgrooming.com</p>
+                <p className="text-gray-300">foti@mayaspetgrooming.com.au</p>
               </div>
             </a>
             <div className="flex gap-4">
@@ -515,13 +564,30 @@ export default function Home() {
               </Button>
             </form>
           </div>
+
+          <div className="mt-12 pt-8 border-t border-gray-700">
+            <h3 className="text-2xl font-bold mb-6">Follow Us</h3>
+            <div className="flex gap-6 flex-wrap">
+              <a href="https://www.facebook.com/profile.php?id=61580317682126" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/mayaspetgrooming?igsh=MXRkcGQ4YWtrNXdhaA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.tiktok.com/@mayaspetgrooming?_t=ZS-909WidRpsKe&_r=1" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <span>TikTok</span>
+              </a>
+              <a href="https://linktr.ee/mayaspetgrooming?ltsid=613c2ec3-3390-40a1-94ca-a15c72fe06a5&utm_source=linktree_profile_share" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <span>More Info</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-950 text-gray-400 py-8 border-t border-gray-800">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Maya's Pet Grooming. All About Furry Tails! 🐾</p>
+          <p>&copy; 2024 Maya's Pet Grooming. FurryTails! 🐾</p>
         </div>
       </footer>
     </div>

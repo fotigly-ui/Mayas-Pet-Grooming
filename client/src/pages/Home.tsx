@@ -548,47 +548,30 @@ export default function Home() {
 
           <div className="mt-12 pt-8 border-t border-gray-700">
             <h3 className="text-2xl font-bold mb-6">Follow Us</h3>
-            <div className="flex gap-6 flex-wrap">
+            <div className="flex gap-8 flex-wrap">
               <a href="https://www.facebook.com/profile.php?id=61580317682126" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <Facebook className="w-5 h-5" />
                 <span>Facebook</span>
               </a>
-              <a href="https://www.instagram.com/mayaspetgrooming?igsh=MXRkcGQ4YWtrNXdhaA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+              <a href="https://www.instagram.com/mayaspetgrooming?igsh=MXRkcGQ4YWtrNXdwaA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <Instagram className="w-5 h-5" />
                 <span>Instagram</span>
               </a>
               <a href="https://www.tiktok.com/@mayaspetgrooming?_t=ZS-909WidRpsKe&_r=1" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <Music className="w-5 h-5" />
                 <span>TikTok</span>
               </a>
-              <a href="https://linktr.ee/mayaspetgrooming?ltsid=613c2ec3-3390-40a1-94ca-a15c72fe06a5&utm_source=linktree_profile_share" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
-                <span>More Info</span>
+              <a href="https://wa.me/61419509190" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-500 transition font-medium flex items-center gap-2">
+                <span>💬 WhatsApp</span>
               </a>
             </div>
           </div>
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-12 border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center gap-8 mb-8">
-            <a href="https://www.facebook.com/profile.php?id=61580317682126" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
-              <Facebook className="w-6 h-6" />
-              <span>Facebook</span>
-            </a>
-            <a href="https://www.instagram.com/mayaspetgrooming?igsh=MXRkcGQ4YWtrNXdhaA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
-              <Instagram className="w-6 h-6" />
-              <span>Instagram</span>
-            </a>
-            <a href="https://www.tiktok.com/@mayaspetgrooming?_t=ZS-909WidRpsKe&_r=1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
-              <Music className="w-6 h-6" />
-              <span>TikTok</span>
-            </a>
-            <a href="https://linktr.ee/mayaspetgrooming?ltsid=613c2ec3-3390-40a1-94ca-a15c72fe06a5&utm_source=linktree_profile_share" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
-              <Link className="w-6 h-6" />
-              <span>More Info</span>
-            </a>
-          </div>
-          <div className="text-center border-t border-gray-800 pt-8">
-            <p>&copy; 2024 Maya's Pet Grooming. All about FurryTails!</p>
-          </div>
+      <footer className="bg-gray-950 text-gray-400 py-8 border-t border-gray-800">
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; 2024 Maya's Pet Grooming. All about FurryTails!</p>
         </div>
       </footer>
     </div>

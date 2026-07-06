@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Star, Sparkles, Scissors, Droplets, Heart, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Star, Sparkles, Scissors, Droplets, Heart, Send, Facebook, Instagram, Music, Link } from "lucide-react";
 import { useState } from "react";
 
 /**
@@ -306,41 +306,22 @@ export default function Home() {
             <p className="text-gray-600 mb-4">Pricing depends on breed, coat and condition.</p>
             <p className="text-lg font-semibold text-gray-900">Send us a photo and we'll give you a straight answer.</p>
           </div>
-        </div>
-      </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Work</h3>
-            <h2 className="text-4xl font-bold text-gray-900 mt-3">Our Gallery</h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Check out our happy clients and their freshly groomed pups.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolio.map((item, index) => (
-              <div 
-                key={index}
-                className="group cursor-pointer"
-              >
-                <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <img 
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div className="text-white">
-                      <h4 className="text-xl font-bold">{item.title}</h4>
-                      <p className="text-sm text-gray-200">{item.breed}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/IorVULIfXjyXHckl.jpeg" 
+                alt="Happy dog in van"
+                className="w-full h-80 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/NUUdtLJQPqLOcbdT.jpeg" 
+                alt="Groomed poodle"
+                className="w-full h-80 object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -585,9 +566,29 @@ export default function Home() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-8 border-t border-gray-800">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Maya's Pet Grooming. FurryTails! 🐾</p>
+      <footer className="bg-gray-950 text-gray-400 py-12 border-t border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center gap-8 mb-8">
+            <a href="https://www.facebook.com/profile.php?id=61580317682126" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
+              <Facebook className="w-6 h-6" />
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/mayaspetgrooming?igsh=MXRkcGQ4YWtrNXdhaA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
+              <Instagram className="w-6 h-6" />
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@mayaspetgrooming?_t=ZS-909WidRpsKe&_r=1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
+              <Music className="w-6 h-6" />
+              <span>TikTok</span>
+            </a>
+            <a href="https://linktr.ee/mayaspetgrooming?ltsid=613c2ec3-3390-40a1-94ca-a15c72fe06a5&utm_source=linktree_profile_share" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-500 transition">
+              <Link className="w-6 h-6" />
+              <span>More Info</span>
+            </a>
+          </div>
+          <div className="text-center border-t border-gray-800 pt-8">
+            <p>&copy; 2024 Maya's Pet Grooming. All about FurryTails!</p>
+          </div>
         </div>
       </footer>
     </div>

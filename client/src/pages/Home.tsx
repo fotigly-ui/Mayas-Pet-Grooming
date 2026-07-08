@@ -27,13 +27,27 @@ export default function Home() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
-    console.log("Form submitted:", formData);
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setFormSubmitted(false);
-    }, 3000);
+    try {
+      // Create email subject and body
+      const subject = `New Grooming Inquiry from ${formData.name}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`;
+      const mailtoLink = `mailto:foti@mayaspetgrooming.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Log for backend integration
+      console.log("Form submitted:", formData);
+      
+      // Show success message
+      setFormSubmitted(true);
+      setTimeout(() => {
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setFormSubmitted(false);
+      }, 3000);
+      
+      // Open email client
+      window.location.href = mailtoLink;
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const services = [
@@ -487,6 +501,15 @@ export default function Home() {
                 <p className="text-gray-300">Macarthur Region, NSW</p>
               </div>
             </div>
+            <a href="https://wa.me/61419509190" target="_blank" rel="noopener noreferrer" className="flex gap-4 hover:opacity-80 transition">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-xl">💬</span>
+              </div>
+              <div>
+                <h4 className="font-bold mb-1">WhatsApp</h4>
+                <p className="text-gray-300">0419 509 190</p>
+              </div>
+            </a>
           </div>
 
           <div className="bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700">

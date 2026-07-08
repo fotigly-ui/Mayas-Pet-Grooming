@@ -122,7 +122,7 @@ export default function Home() {
             />
             <div>
               <h1 className="text-lg font-bold text-gray-900">Maya's Pet Grooming</h1>
-              <p className="text-xs text-orange-500 font-semibold">FurryTails</p>
+              <p className="text-xs text-orange-500 font-semibold">All about FurryTails</p>
             </div>
           </div>
           <div className="hidden md:flex gap-8">

@@ -139,10 +139,15 @@ export default function Home() {
               <p className="text-lg text-gray-600 leading-relaxed">
                 Professional dog grooming that comes to your home. We bring the spa experience directly to your doorstep with our fully equipped mobile grooming van.
               </p>
-              <div className="flex gap-4 pt-4">
+              <div className="flex gap-4 pt-4 flex-col sm:flex-row">
                 <a href="#contact">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">
-                    Book Your Appointment
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold w-full sm:w-auto">
+                    Book Now
+                  </Button>
+                </a>
+                <a href="https://wa.me/61419509190" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white font-semibold w-full sm:w-auto">
+                    💬 WhatsApp
                   </Button>
                 </a>
                 <a href="#services">
@@ -166,13 +171,10 @@ export default function Home() {
             {/* Hero Image */}
             <div className="relative">
               <img 
-                src="https://private-us-east-1.manuscdn.com/sessionFile/dEDbRc6EehzPPNBE8o9Sih/sandbox/js4tgbzDUSSatmHE9pYpwv-img-1_1772088297000_na1fn_aGVyby1iYW5uZXI.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZEVEYlJjNkVlaHpQUE5CRThvOVNpaC9zYW5kYm94L2pzNHRnYnpEVVNTYXRtSEU5cFlwd3YtaW1nLTFfMTc3MjA4ODI5NzAwMF9uYTFmbl9hR1Z5YnkxaVlXNXVaWEkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=QocwuUYFLv6X5Yu6b8WmpLRn-yB307AfUCmBFnoO7y7pPvrpLACzZ0mJWKmAbG0pExFahI9mQWcYpMpDhXymA0mC1mh9H~5JQtBXDhdByiLgaouUWPJ7uqReOGTV1QpLuAP7GcVvxvIEiiW031HtqFQPwZsdT1gITdKLwOQxSwDo7rJbficxNkGLcBz9N51im6g39IEJU8Ppix5Smtc08e~vyhIgXG6XKTe-DQOcBTkiC7JZe9DNo8XsfTmmJ1wKjmThoJH24MaABRrSY5VKNMvSAaVvHy~HKy011Y18uBWWshBT~w2qnfOXt3OetLD0wR9pStcOt8o31gpI6SBXFg__"
-                alt="Happy groomed dog"
+                src="/manus-storage/IMG_3005_d38aa694.PNG"
+                alt="Maya's Pet Grooming Team"
                 className="w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg border-2 border-orange-100">
-                <p className="text-sm font-semibold text-gray-900">All About Furry Tails! 🐾</p>
-              </div>
             </div>
           </div>
         </div>

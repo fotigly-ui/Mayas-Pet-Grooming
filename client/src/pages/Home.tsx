@@ -134,7 +134,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-50 pt-16 pb-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-50 pt-12 pb-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
@@ -190,13 +190,20 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-24 bg-white">
+      <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
             <div className="space-y-6">
               <div>
                 <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet Maya's</h3>
                 <h2 className="text-4xl font-bold text-gray-900 mt-3">Named after the littlest team member.</h2>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/nJPvxwcbRwJwDAtl.jpeg" 
+                  alt="Maya's Pet Grooming Team"
+                  className="w-full h-auto rounded-2xl shadow-xl"
+                />
               </div>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Maya's Pet Grooming started the way most good local businesses do with a love of dogs and a family that wanted to do things properly. We kitted out our own trailer, put it on the road, and now bring the grooming salon straight to driveways.
@@ -240,19 +247,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-12">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/nJPvxwcbRwJwDAtl.jpeg" 
-                alt="Maya's Pet Grooming Team"
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-gray-50">
+      <section id="services" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Services</h3>
@@ -283,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-orange-50">
+      <section className="py-16 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">How It Works</h3>
@@ -331,7 +331,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-orange-50">
+      <section id="testimonials" className="py-16 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Reviews</h3>
@@ -358,7 +358,7 @@ export default function Home() {
       </section>
 
       {/* Mobile Van Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -413,7 +413,7 @@ export default function Home() {
       </section>
 
       {/* Service Area Map Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Service Coverage</h3>

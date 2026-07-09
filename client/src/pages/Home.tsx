@@ -192,14 +192,7 @@ export default function Home() {
       {/* About Us Section */}
       <section id="about" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/nJPvxwcbRwJwDAtl.jpeg" 
-                alt="Maya's Pet Grooming Team"
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-            </div>
+          <div className="space-y-12">
             <div className="space-y-6">
               <div>
                 <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet Maya's</h3>
@@ -246,6 +239,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="mt-12">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/nJPvxwcbRwJwDAtl.jpeg" 
+                alt="Maya's Pet Grooming Team"
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>
@@ -318,19 +318,12 @@ export default function Home() {
             <p className="text-lg font-semibold text-gray-900">Send us a photo and we'll give you a straight answer.</p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-16">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img 
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/IorVULIfXjyXHckl.jpeg" 
                 alt="Happy dog in van"
-                className="w-full h-80 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/NUUdtLJQPqLOcbdT.jpeg" 
-                alt="Groomed poodle"
-                className="w-full h-80 object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>

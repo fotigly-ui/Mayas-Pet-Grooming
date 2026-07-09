@@ -185,7 +185,7 @@ export default function Home() {
             {/* Hero Image */}
             <div className="relative">
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/SvDxGHvNFQHwkpMx.PNG"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/fhGmHWJoYmYXbtls.PNG"
                 alt="Maya's Pet Grooming Team Caricature"
                 className="w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
               />
@@ -200,7 +200,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/vhruOgkmTAZYfqAH.PNG" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/nJPvxwcbRwJwDAtl.jpeg" 
                 alt="Maya's Pet Grooming Team"
                 className="w-full h-auto rounded-2xl shadow-xl"
               />

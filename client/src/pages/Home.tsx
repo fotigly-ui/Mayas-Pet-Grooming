@@ -84,11 +84,6 @@ export default function Home() {
       title: "Happy in the Van",
       breed: "Golden Retriever",
     },
-    {
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/NUUdtLJQPqLOcbdT.jpeg",
-      title: "Professional Grooming Setup",
-      breed: "Poodle",
-    },
   ];
 
   const testimonials = [
@@ -323,18 +318,11 @@ export default function Home() {
             <p className="text-lg font-semibold text-gray-900">Send us a photo and we'll give you a straight answer.</p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-16">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img 
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/IorVULIfXjyXHckl.jpeg" 
                 alt="Happy dog in van"
-                className="w-full h-80 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/NUUdtLJQPqLOcbdT.jpeg" 
-                alt="Groomed poodle"
                 className="w-full h-80 object-cover"
               />
             </div>

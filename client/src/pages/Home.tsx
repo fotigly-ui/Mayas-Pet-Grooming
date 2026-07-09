@@ -177,7 +177,14 @@ export default function Home() {
               </div>
             </div>
 
-
+            {/* Hero Image */}
+            <div className="relative">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/fhGmHWJoYmYXbtls.PNG"
+                alt="Maya's Pet Grooming Team Caricature"
+                className="w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -186,17 +193,17 @@ export default function Home() {
       <section id="about" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/nJPvxwcbRwJwDAtl.jpeg" 
+                alt="Maya's Pet Grooming Team"
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
+            </div>
             <div className="space-y-6">
               <div>
                 <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet Maya's</h3>
                 <h2 className="text-4xl font-bold text-gray-900 mt-3">Named after the littlest team member.</h2>
-              </div>
-              <div className="mt-6 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/fhGmHWJoYmYXbtls.PNG"
-                  alt="Maya's Pet Grooming Team Caricature"
-                  className="w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-                />
               </div>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Maya's Pet Grooming started the way most good local businesses do with a love of dogs and a family that wanted to do things properly. We kitted out our own trailer, put it on the road, and now bring the grooming salon straight to driveways.
@@ -311,7 +318,22 @@ export default function Home() {
             <p className="text-lg font-semibold text-gray-900">Send us a photo and we'll give you a straight answer.</p>
           </div>
 
-
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/IorVULIfXjyXHckl.jpeg" 
+                alt="Happy dog in van"
+                className="w-full h-80 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/NUUdtLJQPqLOcbdT.jpeg" 
+                alt="Groomed poodle"
+                className="w-full h-80 object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

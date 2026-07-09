@@ -197,15 +197,7 @@ export default function Home() {
       {/* About Us Section */}
       <section id="about" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663384661868/XeYpEnAfTiXjZhal.jpeg" 
-                alt="Maya's Pet Grooming Team"
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-            </div>
-            <div className="space-y-6">
+          <div className="space-y-6">
               <div>
                 <h3 className="text-sm font-semibold text-orange-500 uppercase tracking-wider">Meet Maya's</h3>
                 <h2 className="text-4xl font-bold text-gray-900 mt-3">Named after the littlest team member.</h2>
@@ -251,7 +243,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>

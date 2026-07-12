@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Star, Sparkles, Scissors, Droplets, Heart, Send, Facebook, Instagram, Music, Link } from "lucide-react";
 import { useState } from "react";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 /**
  * Design Philosophy: Vibrant Playful Energy
@@ -21,32 +23,31 @@ export default function Home() {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
+  const contactMutation = trpc.contact.submit.useMutation();
+
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     try {
-      // Create email subject and body
-      const subject = `New Grooming Inquiry from ${formData.name}`;
-      const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nDog Name: ${formData.dogName}\n\nMessage:\n${formData.message}`;
-      const mailtoLink = `mailto:foti@mayaspetgrooming.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Log for backend integration
-      console.log("Form submitted:", formData);
+      const result = await contactMutation.mutateAsync(formData);
       
       // Show success message
+      toast.success(result.message);
       setFormSubmitted(true);
+      
+      // Clear form after 2 seconds
       setTimeout(() => {
         setFormData({ name: "", email: "", phone: "", dogName: "", message: "" });
         setFormSubmitted(false);
-      }, 3000);
-      
-      // Open email client
-      window.location.href = mailtoLink;
+      }, 2000);
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Failed to submit inquiry. Please try again.";
+      toast.error(errorMessage);
       console.error("Error submitting form:", error);
     }
   };
@@ -399,6 +400,7 @@ export default function Home() {
                       placeholder="0419 509 190"
                       value={formData.phone}
                       onChange={handleFormChange}
+                      required
                       className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border border-gray-600 focus:border-orange-500 focus:outline-none transition"
                     />
                   </div>
@@ -431,10 +433,20 @@ export default function Home() {
                 <Button 
                   type="submit"
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold w-full flex items-center justify-center gap-2"
+                  disabled={contactMutation.isPending}
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  {contactMutation.isPending ? (
+                    <>
+                      <span className="animate-spin">⏳</span>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-xs text-gray-400 text-center">

@@ -1,0 +1,2 @@
+Last build attempt: 2026-07-12 12:35 GMT+10
+This file forces Vercel to detect new commits and rebuild from the latest code.

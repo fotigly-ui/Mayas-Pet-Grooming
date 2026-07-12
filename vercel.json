@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm run build:frontend",
-  "outputDirectory": "dist/public",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
   "framework": "vite",
   "installCommand": "pnpm install",
   "env": {

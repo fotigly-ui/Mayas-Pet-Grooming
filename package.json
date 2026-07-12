@@ -1,4 +1,5 @@
 {
+  "_comment": "Force Vercel rebuild - clear cache",
   "name": "mayas-pet-grooming",
   "version": "1.0.1",
   "type": "module",

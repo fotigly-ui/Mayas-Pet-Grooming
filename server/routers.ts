@@ -3,8 +3,9 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
-import { notifyOwner } from "./_core/notification";
+import { sendContactFormEmail } from "./_core/emailService";
 import { TRPCError } from "@trpc/server";
+import { ENV } from "./_core/env";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -33,26 +34,18 @@ export const appRouter = router({
       )
       .mutation(async ({ input }) => {
         try {
-          // Format the inquiry message
-          const inquiryText = `
-New Grooming Inquiry:
+          // Send email to owner
+          const ownerEmail = "foti@mayaspetgrooming.com.au";
+          const emailSent = await sendContactFormEmail(
+            ownerEmail,
+            input.name,
+            input.email,
+            input.phone,
+            input.dogName,
+            input.message
+          );
 
-Name: ${input.name}
-Email: ${input.email}
-Phone: ${input.phone}
-Dog Name: ${input.dogName || "Not provided"}
-
-Message:
-${input.message}
-          `;
-
-          // Send notification to owner
-          const notificationSent = await notifyOwner({
-            title: `New Grooming Inquiry from ${input.name}`,
-            content: inquiryText,
-          });
-
-          if (!notificationSent) {
+          if (!emailSent) {
             throw new TRPCError({
               code: "INTERNAL_SERVER_ERROR",
               message: "Failed to send inquiry. Please try again later.",

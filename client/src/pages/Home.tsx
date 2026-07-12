@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Star, Sparkles, Scissors, Droplets, Heart, Send, Facebook, Instagram, Music, Link } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
@@ -22,6 +23,25 @@ export default function Home() {
     message: "",
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [showCookieBanner, setShowCookieBanner] = useState(false);
+
+  // Check if user has accepted cookies
+  useEffect(() => {
+    const cookieConsent = localStorage.getItem("cookie-consent");
+    if (!cookieConsent) {
+      setShowCookieBanner(true);
+    }
+  }, []);
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem("cookie-consent", "accepted");
+    setShowCookieBanner(false);
+  };
+
+  const handleRejectCookies = () => {
+    localStorage.setItem("cookie-consent", "rejected");
+    setShowCookieBanner(false);
+  };
 
   const contactMutation = trpc.contact.submit.useMutation();
 
@@ -85,6 +105,36 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Cookie Consent Banner */}
+      {showCookieBanner && (
+        <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white p-4 md:p-6 shadow-2xl border-t border-orange-500">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex-1">
+              <p className="text-sm md:text-base leading-relaxed">
+                We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use our website, you consent to our use of cookies.
+              </p>
+            </div>
+            <div className="flex gap-3 flex-shrink-0">
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-gray-600 text-white hover:bg-gray-800"
+                onClick={handleRejectCookies}
+              >
+                Reject
+              </Button>
+              <Button
+                size="sm"
+                className="bg-orange-500 hover:bg-orange-600 text-white"
+                onClick={handleAcceptCookies}
+              >
+                Accept
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
